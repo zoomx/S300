@@ -568,12 +568,17 @@ void loop() {
       delay(5000);  //Avoid to cach button again and stops!
 
     }
-    /*
-      GetCharFromSerial();
-      Serial.print(F("Ricevuto->"));
-      Serial.println(inString);
-      ParseMenu(comm);
-    */
+
+
+
+  }
+
+
+  if (Serial.available()) {
+    GetCharFromSerial();
+    Serial.print(F("Ricevuto->"));
+    Serial.println(inString);
+    ParseMenu(comm);
   }
 }
 
