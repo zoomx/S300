@@ -106,7 +106,7 @@ boolean newData = false;
 // Error messages stored in flash.
 #define error(msg) sd.errorHalt(F(msg))
 
-int ppm;
+unsigned int ppm;
 
 boolean isAlarm = false;
 int MaxCO2 = 2000;
@@ -521,7 +521,9 @@ void setup() {
 
   pinMode(GREENLED, OUTPUT);
   pinMode(REDLED, OUTPUT);
+  pinMode(BUZZER, OUTPUT); 
   digitalWrite(GREENLED, HIGH);
+  digitalWrite(BUZZER, LOW);
 
   //pinMode(BUTTON, INPUT);  //INPUT_PULLUP   //Done by the button library
 
